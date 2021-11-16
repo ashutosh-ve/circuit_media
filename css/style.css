@@ -1,0 +1,502 @@
+/*Insert the font*/
+
+@font-face {
+    font-family: "Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: "Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: "Raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: "Raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+
+/*colors*/
+
+:root{
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+/*reset default*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    height: 4000px;
+}
+
+
+.container{
+    width: 100%;
+    padding:0 15px;
+    margin:0 auto;
+}
+
+@media (min-width:576px) {
+    .container{
+        max-width: 540px ;
+    }
+    
+}
+
+@media (min-width:768px) {
+    .container{
+        max-width: 720px ;
+    }
+    
+}
+
+@media (min-width:992px) {
+    .container{
+        max-width: 960px ;
+    }
+    
+}
+
+@media (min-width:1200px) {
+    .container{
+        max-width: 1152px ;
+    }
+    
+}
+
+header.topbar{
+    background-color: var(--secondary);
+    color: var(--pure);
+    font-family: "Raleway-semibold";
+    padding: 0.75rem 0;
+}
+header.topbar .auth > div a{
+    color: var(--pure);
+    text-decoration: none;
+
+}
+header.topbar .icons a{
+    margin-right: 1rem;
+}
+
+header.topbar .auth .divider{
+    padding: 0 1.5rem;
+}
+
+
+/*utility class we will re-use*/
+
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.items-center{
+    align-items: center;
+}
+
+nav .top{
+    padding: 1.5rem 0;
+}
+
+.magic-shadow{
+    position: relative;
+    background: var(--heaven)
+}
+
+.magic-shadow:after{
+    content:'';
+    display: block;
+    width: 100%;
+    height:69px;
+    background-position: center;
+    background-image:url(../icons/shadow.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom:-24px;
+    z-index: -1;
+}
+
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    border: none;
+    line-height: 0.8;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition:all 0.3 ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary{
+    background: var(--primary);
+    color:var(--heaven);
+    
+}
+.btn-primary:hover{
+    background: var(--secondary);
+    color:var(--primary);
+    border: 1px solid var(--primary);
+    
+}
+
+nav .top .contact h5,nav .top .time h5{
+    font-family: "Raleway-black";
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6,nav .top .time h6{
+    font-family: "Raleway-medium";
+    letter-spacing: 0.055 rem;
+    font-size: 00.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img{
+    margin-right: 1rem;
+}
+nav .top .time img{
+    margin-right: 1rem;
+}
+
+.justify-center{
+    justify-content: center;
+}
+nav .navbar a{
+    transition: all .3s ease;
+    text-decoration: none;
+    color:var(--secondary);
+    font-family: "Raleway-semibold";
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+}
+nav .navbar a:hover{
+    background: var(--primary);
+    color:var(--pure);
+}
+
+header.hero{
+    height: 600px;
+    background-image: url(../images/CIRCUIT\ MEDIA\ final.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    
+}
+
+header.hero .welcome{
+    margin-bottom: 0.25rem;
+}
+
+header.hero .welcome span{
+    font-family: "Raleway-bold";
+    color:var(--heaven);
+    margin-right: 00.75rem;
+    
+}
+
+head.hero h1{
+font-family: "Raleway-ExtraBold";
+color:var(--secondary);
+font-size: 2.5rem;
+margin-bottom: 0.25rem;
+}
+
+header.hero h1 span{
+    color:var(--primary);
+}
+
+header.hero p{
+    font-family: "Raleway-medium";
+    width: 50%;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+header.hero button:first-child{
+    margin-right: 0.50rem;
+}
+
+section{
+    padding:4rem 0;
+}
+
+section.top-products{
+    background: var(--light);
+}
+
+.section-heading{
+    font-family: "Raleway-bold";
+    text-align: center;
+    position: relative;
+    margin-bottom:  6rem;
+}
+.section-heading:after{
+    content:'';
+    display:block;
+    width: 100%;;
+    height: 30px;
+    background-image:url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -20px;
+}
+
+section.top-products .f-slider .f-card{
+    background: var(--heaven);
+    padding:1.5rem 0;
+    border-radius: 4px  ;
+}
+
+section.top-products .f-slider .f-card .p-image img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+    
+}
+
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+
+section.top-products .f-slider .f-card h2{
+    font-family: "Raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom:0.25rem;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+/*Ashutosh try this. It is a slick slider using js*/
+
+.slick-slide{
+    margin:0 27px;
+}
+.slick-list{
+    margin:0 --27px;
+}
+.top-products .slider-btn{
+    width: 30px;
+    height:30px;
+    border: none;
+    background: var(--primary);
+    border-radius: 4px;
+    cursor:pointer;
+    outline:none;
+}
+.prev-btn{
+    position: absolute;
+    top:46%;
+    left:-2rem;
+    z-index: 1rem;
+}
+
+.next-btn{
+    position: absolute;
+    top:46%;
+    right:-2rem;
+    z-index: 1rem;
+   
+}
+
+.top-products .slider{
+    position: relative;
+}
+
+section.about-m img{
+    width:55%;
+  
+
+}
+.flex-1{
+    flex:1;
+}
+
+section.our-services{
+    background: var(--light);
+}
+section.our-services .service-card{
+    background: var(--heaven);
+    text-align: center;
+    margin-right: 2rem;
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-right:2rem;
+    position:relative;
+    border-radius: 4px;
+
+}
+section.our-services .icon{
+    position: absolute;
+    top:-45px;
+    left:50%;
+    transform: translateX(-50%);
+}
+section.our-services .service-card h2{
+    font-family: "Raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.text-primary{
+    color:var(--primary);
+}
+
+section.deal{
+    background: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ), url(../images/campaign-creators-RSc6D7bO0fA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+section.deal .total-ad{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+
+
+}
+section.deal .total-ad div{
+    margin-right: 2rem;
+    background: var(--primary);
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section.deal .total-deal div span:first-child{
+    font-family: "Raleway-semibold";
+    font-size:2.5rem;
+    color:var(--heaven);
+    margin-bottom:0.05rem;
+}
+
+
+section.deal .total-deal div span:last-child{
+    font-family: "Raleway-medium";
+    color:var(--heaven);
+}
+.text-pure{
+    color: var(--light);
+}
+.text-ad{
+    color: var(--secondary);
+    font-family: "Raleway-medium";
+    
+}
+
+section.latest{
+    background:var(--light);
+    position:relative;
+    z-index:0;
+}
+
+section.latest .article-wrapper{
+    display: flex;
+    margin-right: -2rem;
+    
+}
+
+section.latest .article-wrapper .card{
+    margin-right: 2rem;
+    background:var(--heaven);
+    border-radius:4px;
+    
+}
+
+.latest .article-wrapper .card img{
+    width:100%;
+}
+
+section.cotact-us{
+    padding-top:0;
+    padding-bottom:0;
+}
+
+
+section.contact-us .contact-info-wrapper{
+    padding:4rem 0;
+    flex:1;
+}
+
+
+section.contact-us .map{
+    flex:1;
+}
+
+section.contact-us .contact-info{
+    display:flex;
+    justify-content: center;
+}
+
+footer{
+    background: var(--footer);
+    padding: 6rem 0;
+}
+
+footer .container{
+    display: flex;
+    color:var(--pure);
+
+}
+
+footer .box{
+    flex: 1;
+    margin-right: 2 rem;
+    text-align: center;
+}
+
+
+footer .box ul li a{
+    color: var(--primary);
+}
+
+footer .box ul li a:hover{
+    color: var(--danger);
+    transition:all 0.8s ease ;
+}

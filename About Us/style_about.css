@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.container{
+    width: 100%;
+    padding:0 15px;
+    margin:0 auto;
+}
+
+section{
+    padding:2rem 0;
+}
+
+.section-heading{
+    font-family:monospace;
+    text-align: center;
+    position: relative;
+    margin-bottom:  6rem;
+    
+}
+
+.section-heading:after{
+    content:'';
+    display:block;
+    width: 100%;;
+    height: 30px;
+    background-image:url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -20px;
+}
+.justify-between{
+    justify-content: space-between;
+}
+
+section.latest{
+    background:var(--light);
+    position:relative;
+    z-index:0;
+}
+
+section.latest .article-wrapper{
+    display: flex;
+    margin-right: -2rem;
+    
+}
+
+section.latest .article-wrapper .card{
+    margin-right: 2rem;
+    background:var(--heaven);
+    border-radius:4px;
+    
+}
+
+.latest .article-wrapper .card img{
+    width:100%;
+}
